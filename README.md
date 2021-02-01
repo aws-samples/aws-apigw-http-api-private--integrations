@@ -8,13 +8,13 @@ A HTTP API route receives a request and uses a [VPC Link](https://docs.aws.amazo
   
 The following provides demo AWS CloudFormation templates for each of the private integration patterns:  
 
-### [1.Application Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/APIGW-HTTP-private-integration-ALB-ecs.yml)
+### [1.Application Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-ALB-ecs.yml)
 ![alb](images/alb.png) 
 
-### [2.Network Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/APIGW-HTTP-private-integration-AWS-Cloudmap-ecs.yml)
+### [2.Network Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-NLB-ecs.yml)
 ![alb](images/nlb.png) 
 
-### [3.AWS Cloud Map.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/APIGW-HTTP-private-integration-NLB-ecs.yml)
+### [3.AWS Cloud Map.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-AWS-Cloudmap-ecs.yml)
 ![alb](images/cloudmap.png) 
 
 Each deploys a base VPC with internet and NAT gateways, across three Availability Zones, and includes an ECS cluster running containers on EC2 Instances in private subnets. Also, an API Gateway VPC link, and an HTTP API with private integration to each of the three private integration methods. Public access is only via an Amazon API Gateway HTTP API using a VPC link to an internal resources and private subnets.
@@ -27,7 +27,7 @@ Each template presumes you have already created an [ECR Image](https://docs.aws.
 
 - - -
 ### Deployment.
-1-Download CloudFormation template from the [GitHub repository.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations)
+1-Download CloudFormation template from the [GitHub repository.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/tree/main/templates)
 
 2-From your AWS console, navigate to Cloudformation.
 
