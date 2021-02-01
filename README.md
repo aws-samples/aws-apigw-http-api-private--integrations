@@ -2,7 +2,7 @@
 - - -
 
 ## Overview.
-This is a demo using [Amazon API Gateway HTTP private integration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) with an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) or [AWS Cloud Map](https://aws.amazon.com/cloud-map/) service.  
+This demo uses [Amazon API Gateway HTTP private integrations](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) with an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) or [AWS Cloud Map](https://aws.amazon.com/cloud-map/) service.  
 
 A HTTP API route receives a request and uses a [VPC Link](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vpc-links.html) to encapsulate connections between Amazon API Gateway and its targeted VPC resources. When you create a VPC link, Amazon API Gateway creates and manages the [elastic network interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) for the VPC link in your account. All three HTTP API private integration methods only allow access via a VPC link to targets on an Amazon ECS cluster which sees its resource on underlying EC2 instances. 
   
@@ -11,10 +11,10 @@ The following provides demo AWS CloudFormation templates for each of the private
 ### [1.Application Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/APIGW-HTTP-private-integration-ALB-ecs.yml)
 ![alb](images/alb.png) 
 
-### 2.Network Load Balancer.
+### [2.Network Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/APIGW-HTTP-private-integration-AWS-Cloudmap-ecs.yml)
 ![alb](images/nlb.png) 
 
-### 3.AWS Cloud Map.
+### [3.AWS Cloud Map.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/APIGW-HTTP-private-integration-NLB-ecs.yml)
 ![alb](images/cloudmap.png) 
 
 Each deploys a base VPC with internet and NAT gateways, across three Availability Zones, and includes an ECS cluster running containers on EC2 Instances in private subnets. Also, an API Gateway VPC link, and an HTTP API with private integration to each of the three private integration methods. Public access is only via an Amazon API Gateway HTTP API using a VPC link to an internal resources and private subnets.
