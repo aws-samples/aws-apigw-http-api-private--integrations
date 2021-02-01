@@ -1,12 +1,12 @@
 # Configuring Private Integrations with Amazon API Gateway HTTP APIs.
-- - -
 
+- - -
 ## Overview.
 This demo uses [Amazon API Gateway HTTP private integrations](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) with an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) or [AWS Cloud Map](https://aws.amazon.com/cloud-map/) service.  
 
-A HTTP API route receives a request and uses a [VPC Link](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vpc-links.html) to encapsulate connections between Amazon API Gateway and its targeted VPC resources. When you create a VPC link, Amazon API Gateway creates and manages the [elastic network interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) for the VPC link in your account. All three HTTP API private integration methods only allow access via a VPC link to targets on an Amazon ECS cluster which sees its resource on underlying EC2 instances. 
+A HTTP API route receives a request and uses a [VPC Link](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vpc-links.html) to encapsulate connections between Amazon API Gateway and its targeted VPC resources. When a VPC link is created, Amazon API Gateway creates and manages the [elastic network interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) for the VPC link in your account. All three HTTP API private integration methods only allow access via a VPC link to targets on an Amazon ECS cluster which sees its resource on underlying EC2 instances. 
   
-The following provides demo AWS CloudFormation templates for each of the private integration patterns:  
+The following provides demo AWS CloudFormation templates for each of the three private integration patterns:  
 
 ### [1.Application Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-ALB-ecs.yml)
 ![alb](images/alb.png) 
@@ -70,6 +70,6 @@ Once deployed, an API Gateway Invoke URL can be found within the Outputs tab in 
 
 - - -
 ### License Summary.
-This sample code is made available under the MIT-0 license. See the LICENSE file.  
+This sample code is made available under the MIT-0 license. See the [LICENSE file.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/LICENSE)  
 
 - - -
