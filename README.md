@@ -27,7 +27,7 @@ Each template presumes you have already created an [ECR Image](https://docs.aws.
 
 - - -
 ### Deployment.
-1-Download CloudFormation template from the [GitHub repository.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/README.md)
+1-Download CloudFormation template from the [GitHub repository.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations)
 
 2-From your AWS console, navigate to Cloudformation.
 
