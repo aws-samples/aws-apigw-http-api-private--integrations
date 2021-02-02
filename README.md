@@ -1,19 +1,13 @@
-# Configuring Private Integrations with Amazon API Gateway HTTP APIs
+# Configuring private integrations with Amazon API Gateway HTTP APIs
 ## Overview.
-The following demo deploys:  
-
-A base VPC with Public and Private Subnets across 3 Availability Zones.  
-
-Internet and NAT gateways.  
-
-Amazon ECS cluster, with resources on underlying EC2 instances in Private Subnets.  
-
-API Gateway VPC link
-
-[Amazon API Gateway HTTP private integrations](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) with an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) or [AWS Cloud Map](https://aws.amazon.com/cloud-map/).  
-
-
 The below links provide AWS CloudFormation templates for each of the three private integration patterns. A HTTP API route receives a request and uses a [VPC Link](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vpc-links.html) to encapsulate connections between Amazon API Gateway and its targeted VPC resources. When a VPC link is created, Amazon API Gateway creates and manages the [elastic network interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) for the VPC link in your account. All three HTTP API private integration methods only allow access via a VPC link to targets on an Amazon ECS cluster which sees its resource on underlying EC2 instances in Private Subnets.
+
+Each template deploys:  
+- A base VPC with Public and Private Subnets across 3 Availability Zones.  
+- Internet and NAT gateways.  
+- Amazon ECS cluster, with resources on underlying EC2 instances in Private Subnets.  
+- API Gateway VPC link
+- [Amazon API Gateway HTTP private integrations](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) with either an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) or [AWS Cloud Map](https://aws.amazon.com/cloud-map/).  
 
 ### [1.Application Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-ALB-ecs.yml)
 [![alb](images/alb.png)](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-ALB-ecs.yml)
@@ -24,11 +18,10 @@ The below links provide AWS CloudFormation templates for each of the three priva
 ### [3.AWS Cloud Map.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-AWS-Cloudmap-ecs.yml)
 [![alb](images/cloudmap.png)](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-AWS-Cloudmap-ecs.yml)
 
-
-**NOTE:** By default your account will only have **five** elastic IP addresses unless you have requested an increase. As this demo deploys **three** NAT Gateways, therefore, **three** elastic IP addresses must be available.  
-
 - - -
 ### Getting Started - Pre-requisites.
+**NOTE:** By default your account will only have **five** elastic IP addresses unless you have requested an increase. As this demo deploys **three** NAT Gateways, therefore, **three** elastic IP addresses must be available.  
+
 Each template presumes you have already created an [ECR Image](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html) which is accessible from your account and region. This is required as an initial input parameter. If not, then [install docker](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html) and create a [docker image](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#docker-basics-create-image) of a simple http web application listening on port 80. Then [push](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html#use-ecr) your image to Amazon Elastic Container Registry (ECR).  
 
 - - -
