@@ -7,7 +7,7 @@ A [HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-a
 Each template deploys:  
 - A base VPC with Public and Private Subnets across 3 Availability Zones.  
 - Internet and NAT gateways.  
-- Amazon ECS cluster, with resources on underlying EC2 instances in Private Subnets.  
+- Amazon ECS cluster with resources on underlying EC2 instances in Private Subnets.  
 - API Gateway VPC link.
 - HTTP API with integration to either an ALB, NLB or AWS Cloud Map.
 
