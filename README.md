@@ -1,8 +1,11 @@
-# Configuring Private Integrations with Amazon API Gateway HTTP APIs.
+# Configuring Private Integrations with Amazon API Gateway HTTP APIs
 
 ## Overview.
-This demo deploys: 
-A base VPC with Public and Private Subnets across 3 Availability Zones.
+This demo deploys:  
+
+Base VPC with Public and Private Subnets across 3 Availability Zones.  
+Internet and NAT gateways.  
+
 Amazon ECS cluster, with resources on underlying EC2 instances in Private Subnets.
 [Amazon API Gateway HTTP private integrations](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) with an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) or [AWS Cloud Map](https://aws.amazon.com/cloud-map/) service.  
 
