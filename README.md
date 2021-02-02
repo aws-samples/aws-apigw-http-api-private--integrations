@@ -28,15 +28,15 @@ Each template presumes you have already created an [ECR Image](https://docs.aws.
 
 - - -
 ### Deployment.
-1-Download CloudFormation template from the [GitHub repository.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/tree/main/templates)
+1-Download a CloudFormation template from the [GitHub repository.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/tree/main/templates)
 
 2-From your AWS console, navigate to Cloudformation.
 
-3-Create stack, select *With new resources (standard)*
+3-Create stack, select *With new resources (standard)*.
 
-4-Select upload template, then Choose file
+4-Select upload template, then Choose file.
 
-5-Under Specify stack details provide a unique stack name
+5-Under Specify stack details provide a unique stack name.
 
 6-After you provide your ECR Image URI, either leave the below default Parameters, or adjust depending on your requirement.
 
@@ -46,17 +46,17 @@ Each template presumes you have already created an [ECR Image](https://docs.aws.
 
 - MaxSize: Maximum number of EC2 instances that can be launched in your ECS cluster.
 
-- ECSAMI: The Amazon Machine Image ID used for the cluster, leave it as the default value to get the latest AMI
+- ECSAMI: The Amazon Machine Image ID used for the cluster, leave it as the default value to get the latest AMI.
 
 - ECRImage: Your Amazon ECR Image URI - example: **111122223333.dkr.ecr.eu-west-2.amazonaws.com/demo-app:latest**
 
-- NumberOfTasks: The Number or ECS task to be deployed into your ECS Cluster
+- NumberOfTasks: The Number or ECS task to be deployed into your ECS Cluster.
 
-7-Next
+7-Next.
 
-8-For this demo only, you can then accept the defaults for Configure stack options and Advanced options
+8-For this demo only, you can then accept the defaults for Configure stack options and Advanced options.
 
-9-Next
+9-Next.
 
 10-Finally, before you create the stack, please remember to tick - "I acknowledge that AWS CloudFormation might create IAM resources."  
 
