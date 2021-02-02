@@ -1,13 +1,14 @@
 # Configuring private integrations with Amazon API Gateway HTTP APIs
 ## Overview.
-The following provides AWS CloudFormation templates for three private integration patterns (ALB, NLB, AWS Cloud Map). A [HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html) route receives a request and uses a [VPC Link](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vpc-links.html) to encapsulate connections between Amazon API Gateway and its targeted VPC resources. When a VPC link is created, Amazon API Gateway creates and manages the [elastic network interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) for the VPC link in your account. All three HTTP API private integration methods only allow access via a VPC link to targets on an [Amazon ECS](https://aws.amazon.com/ecs) cluster.
+The following provides AWS CloudFormation templates for three private integration patterns using either an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) or [AWS Cloud Map](https://aws.amazon.com/cloud-map/).  
+A [HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html) route receives a request and uses a [VPC Link](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vpc-links.html) to encapsulate connections between Amazon API Gateway and its targeted VPC resources. When a VPC link is created, Amazon API Gateway creates and manages the [elastic network interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) for the VPC link in your account. All three HTTP API private integration methods only allow access via a VPC link to targets on an [Amazon ECS](https://aws.amazon.com/ecs) cluster.
 
 Each template deploys:  
 - A base VPC with Public and Private Subnets across 3 Availability Zones.  
 - Internet and NAT gateways.  
 - Amazon ECS cluster, with resources on underlying EC2 instances in Private Subnets.  
 - API Gateway VPC link.
-- [Amazon API Gateway HTTP private integrations](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) with either an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) or [AWS Cloud Map](https://aws.amazon.com/cloud-map/).  
+- [Amazon API Gateway HTTP private integrations](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) with either an ALB, NLB or AWS Cloud Map.
 
 ### [1.Application Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-ALB-ecs.yml)
 [![alb](images/alb.png)](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-ALB-ecs.yml)
