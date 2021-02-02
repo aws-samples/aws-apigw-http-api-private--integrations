@@ -1,10 +1,10 @@
 # Configuring private integrations with Amazon API Gateway HTTP APIs
 
-The following provides AWS CloudFormation templates to three [Amazon API Gateway HTTP private integration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) configurations using either an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) or [AWS Cloud Map](https://aws.amazon.com/cloud-map/).  
+The following provides AWS CloudFormation [templates](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/tree/main/templates) to three [Amazon API Gateway HTTP private integration](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-private.html) configurations using either an [Application Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html), [Network Load Balancer](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html) or [AWS Cloud Map](https://aws.amazon.com/cloud-map/).  
 
 A [HTTP API](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api.html) route receives a request and uses a [VPC Link](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-vpc-links.html) to encapsulate connections between Amazon API Gateway and its targeted VPC resources. When a VPC link is created, Amazon API Gateway creates and manages the [elastic network interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) for the VPC link in your account. All three HTTP API private integration methods only allow access via a VPC link to targets on an [Amazon ECS](https://aws.amazon.com/ecs) cluster.
 
-Each template deploys:  
+Each [template](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/tree/main/templates) deploys:  
 - A base VPC with Public and Private Subnets across 3 Availability Zones.  
 - Internet and NAT gateways.  
 - Amazon ECS cluster with resources on underlying EC2 instances in Private Subnets.  
