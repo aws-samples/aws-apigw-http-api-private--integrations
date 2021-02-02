@@ -30,7 +30,7 @@ Each template presumes you have already created an [ECR Image](https://docs.aws.
 ### Deployment.
 1-Download a CloudFormation template from the [GitHub repository.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/tree/main/templates)
 
-2-From your AWS console, navigate to Cloudformation.
+2-From your AWS console, navigate to CloudFormation.
 
 3-Create stack, select *With new resources (standard)*.
 
