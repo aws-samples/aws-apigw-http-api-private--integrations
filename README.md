@@ -9,7 +9,7 @@ A HTTP API route receives a request and uses a [VPC Link](https://docs.aws.amazo
 The following provides demo AWS CloudFormation templates for each of the three private integration patterns:  
 
 ### [1.Application Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-ALB-ecs.yml)
-![alb](images/alb.png) 
+[![alb](images/alb.png)](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-ALB-ecs.yml)
 
 ### [2.Network Load Balancer.](https://github.com/aws-samples/aws-apigw-http-api-private--integrations/blob/main/templates/APIGW-HTTP-private-integration-NLB-ecs.yml)
 ![alb](images/nlb.png) 
