@@ -1,7 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: Deploys a base VPC with Public and Private Subnets across 3 Availability Zones,
-             with an EC2 ECS cluster running containers in Private Subnets.
-             Public access is only via API Gateway (HTTP) with a private integration using a VPC link to an internal ALB and Private Subnets. 
+Description: Deploys a base VPC with Public and Private Subnets across 3 Availability Zones, 
+             an Amazon ECS cluster, with resources on underlying EC2 instances in Private Subnets.
+             Public access is only via Amazon API Gateway HTTP APIs with a private integration using a VPC link to an internal ALB and Private Subnets. 
 
              NOTE! - this template presumes you have already created an ECR Image which is accessible from your account. This is required as an initial Parameter.
              Also remember to tick "I acknowledge that AWS CloudFormation might create IAM resources."
